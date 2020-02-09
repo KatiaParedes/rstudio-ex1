@@ -1,0 +1,70 @@
+---
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+# Part 1
+## Life of Brian
+Title|Writer|Producer|Starring
+:---|:---:|:---:|---:
+|Life Of Brian|Monty Python|John Goldstone|Graham Chapman
+||||John Cleese
+||||Terry Gilliam
+||||Eric Idle
+||||Terry Jones
+||||Michael Palin
+
+**Life of Brian** is a satire on religion and tells the story of a young man who is mistaken for a messiah. _Brian Cohen_ was born at the same time as **_Jesus of Nazareth_**. Unaware that he is a Jew himself, he later joins a political group that wants to get the Romans out of Judea.
+
+![](.\Lifeofbrianfilmposter.jpg)
+
+[Hyperlink to movie](https://en.wikipedia.org/wiki/Monty_Python%27s_Life_of_Brian)
+
+
+# Part 2
+
+## With code and without output
+
+```{r,results="hide",fig.keep = 'none'}
+# In R, hashtags are used to make comments without being compiled. You will
+# learn things like this very soon!
+# Create data
+data = data.frame(
+x=seq(1:100) + 0.1*seq(1:100)*sample(c(1:10) , 100 , replace=T),
+y=seq(1:100) + 0.2*seq(1:100)*sample(c(1:10) , 100 , replace=T)
+)
+# Basic scatterplot
+plot(data$x, data$y,
+xlim=c(0,250) , ylim=c(0,250),
+pch=18,
+cex=2,
+col="#69b3a2",
+xlab="value of X", ylab="value of Y",
+main="A simple scatterplot"
+)
+
+```
+
+
+## With output and without code
+
+```{r, echo=FALSE}
+# In R, hashtags are used to make comments without being compiled. You will
+# learn things like this very soon!
+# Create data
+data = data.frame(
+x=seq(1:100) + 0.1*seq(1:100)*sample(c(1:10) , 100 , replace=T),
+y=seq(1:100) + 0.2*seq(1:100)*sample(c(1:10) , 100 , replace=T)
+)
+# Basic scatterplot
+plot(data$x, data$y,
+xlim=c(0,250) , ylim=c(0,250),
+pch=18,
+cex=2,
+col="#69b3a2",
+xlab="value of X", ylab="value of Y",
+main="A simple scatterplot"
+)
+```
+
